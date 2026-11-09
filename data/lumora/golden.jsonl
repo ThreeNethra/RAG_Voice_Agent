@@ -1,0 +1,30 @@
+{"id": 1, "type": "lookup", "question": "How long does the CT-300 battery last at default settings?", "gold": ["02_products_catalog.md", "09_support_faq.md"], "mode": "any", "not": [], "facts": ["24 months"]}
+{"id": 2, "type": "lookup", "question": "What is the Growth plan base price?", "gold": ["03_pricing_and_plans.md"], "mode": "any", "not": ["03b_pricing_2025_DEPRECATED.md"], "facts": ["$1,950"]}
+{"id": 3, "type": "lookup", "question": "Who is the CISO?", "gold": ["04_leadership_and_org.md"], "mode": "any", "not": [], "facts": ["Grace Mbeki"]}
+{"id": 4, "type": "lookup", "question": "When and where was Lumora founded?", "gold": ["01_company_overview.md"], "mode": "any", "not": [], "facts": ["March 2018", "Pune"]}
+{"id": 5, "type": "lookup", "question": "What is the API rate limit on the Growth plan?", "gold": ["03_pricing_and_plans.md", "11_api_documentation.md"], "mode": "any", "not": [], "facts": ["300"]}
+{"id": 6, "type": "lookup", "question": "Which HTTP status code means I exceeded the rate limit?", "gold": ["11_api_documentation.md"], "mode": "any", "not": [], "facts": ["429"]}
+{"id": 7, "type": "stale", "question": "What is the price of the CT-300 sensor?", "gold": ["03_pricing_and_plans.md"], "mode": "any", "not": ["03b_pricing_2025_DEPRECATED.md"], "facts": ["$89"]}
+{"id": 8, "type": "stale", "question": "Up to what discount can a sales rep approve without anyone else's sign-off?", "gold": ["03_pricing_and_plans.md"], "mode": "any", "not": ["03b_pricing_2025_DEPRECATED.md"], "facts": ["10%"]}
+{"id": 9, "type": "stale", "question": "Is the CT-200 sensor still sold?", "gold": ["02_products_catalog.md", "09_support_faq.md"], "mode": "any", "not": [], "facts": ["2026-03-31"]}
+{"id": 10, "type": "stale", "question": "What was revenue in Q2 FY2027?", "gold": ["10_financials_fy2027_q2.md"], "mode": "any", "not": [], "facts": ["$38.6M"]}
+{"id": 11, "type": "stale", "question": "Is version 2 of the API still available?", "gold": ["11_api_documentation.md"], "mode": "any", "not": [], "facts": ["2026-06-30"]}
+{"id": 12, "type": "table", "question": "How many weeks of parental leave does a primary parent get in the USA?", "gold": ["05_hr_handbook.md"], "mode": "any", "not": [], "facts": ["16 weeks"]}
+{"id": 13, "type": "table", "question": "How long is data retained on the Enterprise plan?", "gold": ["02_products_catalog.md", "03_pricing_and_plans.md", "09_support_faq.md"], "mode": "any", "not": [], "facts": ["7 years"]}
+{"id": 14, "type": "table", "question": "What is the first response time for critical issues on Enterprise support?", "gold": ["03_pricing_and_plans.md", "09_support_faq.md"], "mode": "any", "not": [], "facts": ["1 hour"]}
+{"id": 15, "type": "multihop", "question": "Which customer was hit by the March 2026 alert outage and what happened with them afterwards?", "gold": ["07_incident_postmortem_2026-03.md", "08_customer_case_studies.md"], "mode": "all", "not": [], "facts": ["MediNord", "3 years"]}
+{"id": 16, "type": "multihop", "question": "What was the total SLA credit from the outage and what was the value of the lost goods?", "gold": ["07_incident_postmortem_2026-03.md"], "mode": "any", "not": [], "facts": ["212,400", "38,000"]}
+{"id": 17, "type": "multihop", "question": "Does the CISO report to the CEO?", "gold": ["04_leadership_and_org.md"], "mode": "any", "not": [], "facts": ["CTO"], "answer_facts": ["CTO"]}
+{"id": 18, "type": "multihop", "question": "A Growth customer has 520 sensors. What do they pay per month for the sensors above the plan's included amount?", "gold": ["03_pricing_and_plans.md"], "mode": "any", "not": [], "facts": ["500", "$6"], "answer_facts": ["$120"]}
+{"id": 19, "type": "multihop", "question": "Which team does the FrostLogic acquisition sit in and how much was paid for it?", "gold": ["10_financials_fy2027_q2.md"], "mode": "any", "not": [], "facts": ["$9.5M", "Data Science"]}
+{"id": 20, "type": "multihop", "question": "What is the gross margin on hardware and what drives it?", "gold": ["10_financials_fy2027_q2.md"], "mode": "any", "not": [], "facts": ["44%", "$41"]}
+{"id": 21, "type": "identifier", "question": "What is INC-2026-0312?", "gold": ["07_incident_postmortem_2026-03.md"], "mode": "any", "not": [], "facts": ["12 March 2026"]}
+{"id": 22, "type": "identifier", "question": "What is Compass?", "gold": ["02_products_catalog.md"], "mode": "any", "not": [], "facts": ["Compass"]}
+{"id": 23, "type": "identifier", "question": "What does LUMEN stand for?", "gold": ["01_company_overview.md"], "mode": "any", "not": [], "facts": ["Never hide a mistake"]}
+{"id": 24, "type": "policy", "question": "How many unused PTO days can I carry over?", "gold": ["05_hr_handbook.md"], "mode": "any", "not": [], "facts": ["10 unused PTO days"]}
+{"id": 25, "type": "policy", "question": "How soon do I have to submit an expense claim?", "gold": ["05_hr_handbook.md"], "mode": "any", "not": [], "facts": ["30 days"]}
+{"id": 26, "type": "policy", "question": "What is the maximum duration of production access?", "gold": ["06_security_policy.md"], "mode": "any", "not": [], "facts": ["4 hours"]}
+{"id": 27, "type": "policy", "question": "How quickly must a critical vulnerability be patched?", "gold": ["06_security_policy.md"], "mode": "any", "not": [], "facts": ["7 days"]}
+{"id": 28, "type": "unanswerable", "question": "What is Lumora's current stock price?", "gold": [], "mode": "any", "not": [], "facts": []}
+{"id": 29, "type": "unanswerable", "question": "Who is the Chief Marketing Officer?", "gold": [], "mode": "any", "not": [], "facts": []}
+{"id": 30, "type": "unanswerable", "question": "What is the salary band for a Senior Engineer?", "gold": [], "mode": "any", "not": [], "facts": []}

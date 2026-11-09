@@ -1,0 +1,13 @@
+# secrets and per-machine files: never commit these
+.env
+invites.json
+logs/
+index/
+.venv/
+models/*
+!models/.gitkeep
+__pycache__/
+*.pyc
+*.part
+*.zip
+config.json

@@ -1,0 +1,52 @@
+:root{--bg:#0d1417;--card:#131d21;--text:#e8f0f2;--muted:#93a6ad;--line:#243238;--accent:#3dd6b0;--on-accent:#03201a;--warn:#ffc46b;--bad:#ff8a80;--you:#1b2c33;--ring:61,214,176;color-scheme:dark}
+@media (prefers-color-scheme:light){:root{--bg:#eef3f4;--card:#fff;--text:#13242a;--muted:#55696f;--line:#d5e0e3;--accent:#0b8f73;--on-accent:#fff;--warn:#8a5600;--bad:#b3261e;--you:#e3f1f1;--ring:11,143,115;color-scheme:light}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom)}
+main{max-width:560px;margin:0 auto;padding:28px 0 40px}
+h1{font-size:1.5rem;margin:0;letter-spacing:.01em}
+.sub{margin:4px 0 20px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+label{display:block;font-weight:600;margin-bottom:6px}
+.check{font-weight:400;display:flex;gap:8px;align-items:center;margin:12px 0 0;color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.row{display:flex;gap:8px;align-items:center}
+.row.center{justify-content:center;flex-wrap:wrap;margin-top:6px}
+input[type=text],input[type=password]{flex:1;min-width:0;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+input::placeholder{color:var(--muted)}
+button{font:inherit;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);border-radius:10px;padding:9px 16px;font-weight:600}
+button:disabled{opacity:.45;cursor:default}
+button.ghost{background:transparent;color:var(--accent)}
+button.danger{background:transparent;color:var(--bad);border-color:var(--bad)}
+button.link{background:none;border:0;color:var(--muted);padding:0;font-weight:400;text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.error{color:var(--bad);margin:10px 0 0}
+.fine{color:var(--muted);font-size:.85rem;margin:12px 0 0}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--muted)}
+.who{font-weight:600;color:var(--text)}
+.stage{display:flex;flex-direction:column;align-items:center;padding:20px 0 12px}
+.orb{--level:0;position:relative;width:132px;height:132px;border-radius:50%;padding:0;border:0;background:none;display:grid;place-items:center}
+.core{width:84px;height:84px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px rgba(var(--ring),.4),0 10px 30px rgba(var(--ring),.25);transform:scale(calc(1 + var(--level)*.35));transition:transform .08s linear,background .25s}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(var(--ring),.35);opacity:0}
+.orb[data-state=idle] .core{background:var(--muted);box-shadow:none}
+.orb[data-state=thinking] .core{background:var(--warn)}
+.orb[data-state=speaking] .core{background:var(--accent)}
+.orb[data-state=connecting] .core{background:var(--warn)}
+@media (prefers-reduced-motion:no-preference){
+ .orb[data-state=listening] .r1{animation:ring 2.4s ease-out infinite}
+ .orb[data-state=speaking] .r1,.orb[data-state=speaking] .r2{animation:ring 1.4s ease-out infinite}
+ .orb[data-state=speaking] .r2{animation-delay:.7s}
+ .orb[data-state=thinking] .core{animation:pulse 1s ease-in-out infinite}
+ @keyframes ring{0%{transform:scale(.75);opacity:.8}100%{transform:scale(1.25);opacity:0}}
+ @keyframes pulse{50%{transform:scale(.9)}}
+}
+.status{margin-top:12px;font-weight:600;min-height:1.5em}
+.log{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;max-height:42vh;overflow-y:auto}
+.log:empty{display:none}
+.log li{padding:9px 12px;border-radius:12px;border:1px solid var(--line);overflow-wrap:anywhere;max-width:92%}
+.log li.you{background:var(--you);align-self:flex-end}
+.log li.agent{align-self:flex-start}
+.log b{display:block;font-size:.75rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.log .cite{display:block;margin-top:4px;color:var(--muted);font-size:.85rem}
+#typed{margin-top:14px}
+@media (max-width:420px){.row.center button{flex:1}}

@@ -1,0 +1,9 @@
+# Lumora Voice: install with scripts\setup.ps1 (it creates its own Python 3.12 environment)
+numpy>=1.26
+scikit-learn>=1.4
+faster-whisper>=1.1          # speech recognition (runs on your NVIDIA GPU)
+nvidia-cublas-cu12           # CUDA libraries for the recogniser (Windows/Linux)
+nvidia-cudnn-cu12==9.*
+kokoro-onnx>=0.4             # natural local voice
+onnxruntime>=1.18
+# optional, better document matching:  sentence-transformers

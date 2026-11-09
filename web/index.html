@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>Lumora Voice</title>
+<link rel="stylesheet" href="/web/call.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Lumora Voice</h1>
+    <p class="sub">Ask questions about the company documents, out loud.</p>
+  </header>
+
+  <section id="join" class="card">
+    <label for="code">Invite code</label>
+    <div class="row">
+      <input id="code" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="xxxx-xxxx-xxxx">
+      <button id="join-btn" type="button">Continue</button>
+    </div>
+    <label class="check"><input id="remember" type="checkbox" checked> Remember on this device</label>
+    <p id="join-error" class="error" role="alert" hidden></p>
+    <p class="fine">Your voice goes to the computer running this assistant, not to Google or any cloud speech service. Calls are text-logged by the owner; audio is never stored.</p>
+  </section>
+
+  <section id="call" class="card" hidden>
+    <div class="top">
+      <span id="who" class="who"></span>
+      <button id="leave" type="button" class="link">Use a different code</button>
+    </div>
+
+    <div class="stage">
+      <button id="orb" type="button" class="orb" data-state="idle" aria-label="Start call">
+        <span class="ring r1"></span><span class="ring r2"></span><span class="core"></span>
+      </button>
+      <div id="status" class="status" role="status" aria-live="polite">Tap to call</div>
+    </div>
+
+    <div class="row center">
+      <button id="mute" type="button" class="ghost" aria-pressed="false" disabled>Mute</button>
+      <button id="stop" type="button" class="ghost" disabled>Stop talking</button>
+      <button id="end" type="button" class="danger" disabled>End call</button>
+    </div>
+
+    <ol id="log" class="log" aria-label="Conversation" aria-live="off"></ol>
+
+    <form id="typed" class="row" autocomplete="off">
+      <label for="text" class="sr">Type a question</label>
+      <input id="text" type="text" maxlength="1000" placeholder="Or type a question" disabled>
+      <button id="send" type="submit" class="ghost" disabled>Send</button>
+    </form>
+    <p id="error" class="error" role="alert" hidden></p>
+    <p id="metrics" class="fine"></p>
+  </section>
+</main>
+<script src="/web/call.js"></script>
+</body>
+</html>

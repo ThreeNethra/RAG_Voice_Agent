@@ -1,0 +1,98 @@
+{
+ "default": [
+  "all-staff"
+ ],
+ "rules": [
+  {
+   "match": "01_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "02_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "03_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "03b_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "09_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "11_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "12_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "19_*",
+   "groups": [
+    "*"
+   ]
+  },
+  {
+   "match": "17_*",
+   "groups": [
+    "exec"
+   ]
+  },
+  {
+   "match": "10_*",
+   "groups": [
+    "finance",
+    "exec"
+   ]
+  },
+  {
+   "match": "15_*",
+   "groups": [
+    "sales",
+    "exec"
+   ]
+  },
+  {
+   "match": "16_*",
+   "groups": [
+    "engineering",
+    "exec"
+   ]
+  },
+  {
+   "match": "07_*",
+   "groups": [
+    "engineering",
+    "support",
+    "exec"
+   ]
+  },
+  {
+   "match": "18_*",
+   "groups": [
+    "finance",
+    "engineering",
+    "exec"
+   ]
+  }
+ ]
+}
